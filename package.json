@@ -1,0 +1,24 @@
+{
+  "name": "agent-slides",
+  "version": "0.1.0",
+  "description": "Slides your coding agent writes, and a harness that checks them.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "bun": ">=1.2"
+  },
+  "scripts": {
+    "build": "bun src/build.ts",
+    "check": "bun src/build.ts && bun src/check.ts",
+    "shot": "bun src/check.ts dist/index.html --shot",
+    "pptx": "bun src/build.ts && bun src/export.ts pptx",
+    "pdf": "bun src/build.ts && bun src/export.ts pdf",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.0",
+    "playwright": "^1.62.1",
+    "pptxgenjs": "^4.0.1",
+    "typescript": "^5.9.0"
+  }
+}

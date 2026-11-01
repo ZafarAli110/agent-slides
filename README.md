@@ -20,7 +20,7 @@ and the checks tell the agent when a slide is wrong.
 
 ## Start
 
-You need [Bun](https://bun.sh) 1.2 or later.
+You need [Bun](https://bun.sh) 1.4.4 or later.
 
 ```bash
 git clone https://github.com/ZafarAli110/agent-slides.git my-talk

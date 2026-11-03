@@ -28,18 +28,39 @@ Each slide must make sense to someone who reads it a week later without the talk
 each point is a short whole sentence, and a demo slide says what happened. More words are fine when they add that.
 `bun run check` warns past 110 words: check each sentence earns its place. The hard limit is fit: never shrink type.
 
+## Plain words, whole sentences
+
+A slide is read once, at the speed of the talk. If a reader has to stop and work out what a sentence means, rewrite
+it: more words are better than a riddle.
+
+- **Say it the way you would to a colleague.** Everyday words; a term only once it has been defined.
+- **Whole sentences: who does what.** Not a compressed slogan the reader has to unpack.
+- **One idea per sentence.** Two ideas joined by a colon or a semicolon are usually two sentences.
+- **Nothing left for the reader to fill in.** A number has its unit ("42 seconds", not "0:42"); a pronoun's thing is
+  named; a comparison says what it is compared with.
+- **Read it aloud to someone new.** If they would ask "meaning what?", rewrite it.
+- **Easy to remember.** A takeaway someone could repeat the next day: short and concrete, a picture rather than an
+  abstraction. Keep the same words every time an idea comes back (a "hook" on every slide, never a "guard" on one):
+  a new word makes the reader wonder whether it is a new thing.
+
+| Hard to read                                                                     | Plain                                                                                                  |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| "Put each rule at the weakest strength that holds. Waivers need friction."       | "CLAUDE.md asks; a hook runs every time. Use one for a rule that must hold whoever decides."           |
+| "'Never commit without asking' is only real if `git commit` is on the ask list." | "'Ask before you commit' in CLAUDE.md is a request; `git commit` on the ask list stops it every time." |
+| "1,600,010 rows in 0:42"                                                         | "1,600,010 rows in 42 seconds"                                                                         |
+
 ## Pick the layout from the shape of the idea
 
-| The idea is | Layout |
-|---|---|
-| a concept: definition, points, takeaway | `explain` |
-| two sides of a real distinction | `compare` |
-| steps in order | `sequence` |
-| the same questions asked of several things | `table` |
-| a fragment of code or a terminal session | `code` |
-| a live demo, or a task for the room | `demo`, `exercise` |
-| one statement worth landing whole | `big`, `quote` |
-| a recap | `checklist` |
+| The idea is                                | Layout             |
+| ------------------------------------------ | ------------------ |
+| a concept: definition, points, takeaway    | `explain`          |
+| two sides of a real distinction            | `compare`          |
+| steps in order                             | `sequence`         |
+| the same questions asked of several things | `table`            |
+| a fragment of code or a terminal session   | `code`             |
+| a live demo, or a task for the room        | `demo`, `exercise` |
+| one statement worth landing whole          | `big`, `quote`     |
+| a recap                                    | `checklist`        |
 
 A diagram is earned only when the claim itself is a structure (containment, order, flow). Never add a picture to make
 a slide "less boring"; boring usually means too dense, or two ideas on one slide.

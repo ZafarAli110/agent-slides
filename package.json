@@ -10,6 +10,7 @@
   "scripts": {
     "build": "bun src/build.ts",
     "check": "bun src/build.ts && bun src/check.ts",
+    "show": "bun src/build.ts && bun src/open.ts",
     "shot": "bun src/check.ts dist/index.html --shot",
     "pptx": "bun src/build.ts && bun src/export.ts pptx",
     "pdf": "bun src/build.ts && bun src/export.ts pdf",

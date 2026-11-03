@@ -30,7 +30,7 @@ bunx playwright install chromium     # the browser the checker and the exporter 
 bun run check                        # builds dist/index.html and checks every slide
 ```
 
-Open `dist/index.html` in a browser and present. The commands are the same on Windows (PowerShell), macOS and Linux.
+`bun run show` builds it and opens `dist/index.html` in your browser; present from there. The commands are the same on Windows (PowerShell), macOS and Linux.
 
 ## Write a slide
 
@@ -69,6 +69,7 @@ Or ask your agent: *"Add a slide after the-loop that explains caching, with an e
 |---|---|
 | `bun run build` | `slides.ts` → `dist/index.html` |
 | `bun run check` | build and check; exits 1 on overflow or placeholder text |
+| `bun run show` | build, then open `dist/index.html` in your default browser |
 | `bun run shot <id>… \| all` | screenshots to `.tmp/shots/` |
 | `bun run typecheck` | type-check `slides.ts` and `src/` |
 | `bun run pptx` / `bun run pdf` | export (`-- --final` for one page per slide) |

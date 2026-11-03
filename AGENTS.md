@@ -8,6 +8,8 @@ it. Read this file before changing anything; read `.claude/skills/slide-authorin
 | Command | What it does |
 |---|---|
 | `bun run build` | `slides.ts` → `dist/index.html` |
+| `bun run dev` | live preview: serves the deck, opens it, rebuilds and reloads the page on every change |
+| `bun run show` | build, then open `dist/index.html` in the default browser |
 | `bun run check` | build, then check every slide in a real browser; fails on overflow or placeholder text |
 | `bun run shot <id>…` or `bun run shot all` | screenshots to `.tmp/shots/<id>.png`, every reveal step shown |
 | `bun run typecheck` | `tsc` over `slides.ts` and `src/`: a wrong layout or field is an error here |

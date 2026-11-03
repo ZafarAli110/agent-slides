@@ -69,3 +69,6 @@ bun run shot <ids you changed>
 
 Then open each screenshot in `.tmp/shots/` and look. Overflow, collisions and a layout keyed to the wrong slide only
 show in a render. Say which screenshots you looked at.
+
+`bun run dev` is the person's live preview: if it is running, every save reloads their page. Don't start it yourself;
+it is a server that never exits. The checks above are how you see the slides.

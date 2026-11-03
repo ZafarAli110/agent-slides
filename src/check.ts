@@ -60,10 +60,17 @@ const slides: Measured[] = await page.$$eval(".slide", (els) => els.map((el) => 
   const main = el.querySelector("main");
   const heading = el.querySelector("h1, h2");
   const words = (node: Element | null): number => (node?.textContent ?? "").trim().split(/\s+/).filter(Boolean).length;
+  // A layout that pushes its content upward never scrolls: it runs into the definition instead. Touching is not
+  // enough (a timeline's dots and the text's descenders cross), so ask for 6px between them.
+  const definition = el.querySelector(".explain-def");
+  const next = el.querySelector(".explain-points, .sequence, .split, table, .demo-steps");
+  const crowded = definition && next
+    ? Math.round(definition.getBoundingClientRect().bottom - next.getBoundingClientRect().top + 6)
+    : 0;
   return {
     id: el.id,
     zoom: Number((main as HTMLElement | null)?.style.zoom || 1),
-    over: main ? Math.max(main.scrollHeight - main.clientHeight, main.scrollWidth - main.clientWidth) : 0,
+    over: Math.max(main ? Math.max(main.scrollHeight - main.clientHeight, main.scrollWidth - main.clientWidth) : 0, crowded),
     words: words(main) - words(heading),
     text: (main?.textContent ?? "").trim(),
     untitled: !(heading?.textContent ?? "").trim(),
